@@ -4,7 +4,7 @@ ClinicsApp.Router = Backbone.Router.extend({
     '*path': 'home'
   },
   home: function () {
-    var view = new ClinicsApp.views.Home();
-    $('#main').html(view.render().el);
+    ClinicsApp.instances.homeView = new ClinicsApp.views.Home();
+    $('#main').html(ClinicsApp.instances.homeView.render().el);
   }
 })
