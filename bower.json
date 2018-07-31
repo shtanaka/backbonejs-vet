@@ -1,0 +1,24 @@
+{
+  "name": "backbonejs-vet",
+  "homepage": "https://github.com/shtanaka/backbonejs-vet",
+  "authors": [
+    "Gustavo Santiago <edsongus@ualberta.ca>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "backbone": "^1.3.3",
+    "jquery": "^3.3.1",
+    "mustache.js": "mustache#^2.3.0",
+    "requirejs": "^2.3.5"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "clinics": [
+    {
+      "id": 0,
+      "name": "Park Dogs and Cats",
+      "address": "112th Street, 47",
+      "city": "Edmonton",
+      "state": "AB",
+      "country": "CA"
+    },
+    {
+      "id": 1,
+      "name": "Healthy Vet Clinic",
+      "address": "Beachborough Ave, 112",
+      "city": "Calgary",
+      "state": "AB",
+      "country": "CA"
+    },
+    {
+      "id": 2,
+      "name": "Premiere Vet Clinic",
+      "address": "Houston Ave, 127",
+      "city": "Houston",
+      "state": "TX",
+      "country": "US"
+    },
+    {
+      "id": 3,
+      "name": "Ashton Animal Clinic",
+      "address": "Jasper Street, 4178",
+      "city": "Blackwood",
+      "state": "NJ",
+      "country": "US"
+    },
+    {
+      "id": 4,
+      "name": "Vetclean Hospital Veterinário",
+      "address": "Av. Viena Weyne, 450",
+      "city": "Fortaleza",
+      "state": "CE",
+      "country": "BR"
+    }
+  ]
+}
