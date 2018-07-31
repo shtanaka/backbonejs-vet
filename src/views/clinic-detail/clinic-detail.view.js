@@ -8,5 +8,8 @@ ClinicsApp.views.ClinicDetailView = Backbone.View.extend({
     var html = this.template(this.model.toJSON());
     this.$el.html(html);
     return this;
+  },
+  goToHome: function () {
+    ClinicsApp.Router.Instance.navigate("#home", true);
   }
 });
