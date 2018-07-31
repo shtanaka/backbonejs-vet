@@ -12,33 +12,7 @@
 
 <body>
   <div id="main"></div>
-  <!-- <div class="container main-container">
-    <h1>Vet clinics</h1>
-    <div class="input-group">
-      <input class="form-control search-input"
-             placeholder="Search for a clinic">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary search-button"
-                type="button">search</button>
-      </div>
-    </div>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>Clinic Name</th>
-          <th>Clinic City</th>
-        </tr>
-      </thead>
-      <tbody class="clinics-list">
 
-      </tbody>
-    </table>
-  </div>
-  <script type="text/template"
-          class="clinics-list-item-template">
-    <td><span class="clinic-list-item"><%= name %></span></td>
-    <td><span class="clinic-list-item"><%= city %></span></td>
-  </script> -->
   <script type="text/template"
           class="home-template">
     <div class="container main-container">
@@ -46,10 +20,6 @@
       <div class="input-group">
         <input class="form-control search-input"
               placeholder="Search for a clinic">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary search-button"
-                  type="button">search</button>
-        </div>
       </div>
       <table class="table table-hover">
         <thead>
@@ -58,7 +28,7 @@
             <th>Clinic City</th>
           </tr>
         </thead>
-        <tbody class="clinics-list">
+        <tbody class="clinic-list">
 
         </tbody>
       </table>
@@ -66,20 +36,37 @@
   </script>
 
   <script type="text/template"
-          class="clinics-list-item-template">
+          class="clinic-list-item-template">
     <td><span class="clinic-list-item"><%= name %></span></td>
     <td><span class="clinic-list-item"><%= city %></span></td>
+    <span><%= id %></span>
+  </script>
+
+  <script type="text/template"
+          class="clinic-detail-template">
+    <div class="container">
+      <div class="jumbotron">
+        <div class="clinic-name display-4"><%= name %></div>
+        <hr class="my-4">
+        <p class="clinic-address lead"><%= address %></p>
+        <p class="clinic-city-state-country"><%= city %>, <%= state %> - <%= country %></p>
+        <a class="btn btn-primary btn-lg" href="#home" role="button">Go back</a>
+      </div>
+    </div>
+
   </script>
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/backbone/backbone.js"></script>
+  <script src="src/utils.js"></script>
   <script src="src/app.js"></script>
   <script src="src/models/clinic.model.js"></script>
   <script src="src/collections/clinic.collection.js"></script>
   <script src="src/views/clinic-list/clinic-list.view.js"></script>
   <script src="src/views/home/home.view.js"></script>
+  <script src="src/views/clinic-detail/clinic-detail.view.js"></script>
   <script src="src/router.js"></script>
 
 </body>

@@ -7,14 +7,36 @@ ClinicsApp.views.Home = Backbone.View.extend({
     this.model.fetch();
   },
   template: _.template($('.home-template').html()),
-  target: $('.clinics-list'),
   render: function () {
+    self = this;
     this.$el.html(this.template());
-    var clinicsList = this.$el.find('.clinics-list');
-    clinicsList.html('');
-    _.each(this.model.toArray(), function (data) {
-      clinicsList.append((new ClinicsApp.views.ClinicListItemView({ model: data })).render().$el);
-    });
+    this.renderList();
+    this.setEvents();
     return this;
+  },
+  renderList: function () {
+    var clinicList = this.$el.find('.clinic-list');
+    clinicList.html('');
+    _.each(this.model.toArray(), function (data) {
+      if (data.get('name').toLowerCase().includes(self.scope.searchString.toLowerCase()))
+        clinicList.append((new ClinicsApp.views.ClinicListItemView({ model: data })).render().$el);
+    });
+  },
+  scope: {
+    keydownTimeout: null,
+    isTyping: false,
+    searchString: ""
+  },
+  setEvents: function () {
+    var self = this;
+    this.$el.find('.search-input').on('keydown', function (event) {
+      if (self.scope.keydownTimeout)
+        clearTimeout(self.scope.keydownTimeout);
+      self.scope.isTyping = true;
+      self.scope.keydownTimeout = setTimeout(function () {
+        self.scope.searchString = event.currentTarget.value;
+        self.renderList();
+      }, 300);
+    });
   }
 });
