@@ -14,7 +14,7 @@ var clinicDetailTemplate =
           <%= country %>
     </p>
     <a class="btn btn-primary btn-lg"
-       href="#home"
+       href=""
        role="button">Go back</a>
   </div>
 </div>`;

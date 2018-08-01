@@ -25,7 +25,6 @@ ClinicsApp.views.Home = Backbone.View.extend({
   },
   scope: {
     keydownTimeout: null,
-    isTyping: false,
     searchString: ""
   },
   setEvents: function () {
@@ -33,7 +32,6 @@ ClinicsApp.views.Home = Backbone.View.extend({
     this.$el.find('.search-input').on('keydown', function (event) {
       if (self.scope.keydownTimeout)
         clearTimeout(self.scope.keydownTimeout);
-      self.scope.isTyping = true;
       self.scope.keydownTimeout = setTimeout(function () {
         self.scope.searchString = event.currentTarget.value;
         self.renderList();
