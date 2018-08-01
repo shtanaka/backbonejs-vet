@@ -2,7 +2,7 @@ ClinicsApp.views.ClinicDetailView = Backbone.View.extend({
   model: new ClinicsApp.models.Clinic(),
   tagName: 'div',
   initialize: function () {
-    this.template = _.template($('.clinic-detail-template').html());
+    this.template = _.template(clinicDetailTemplate);
   },
   render: function () {
     var html = this.template(this.model.toJSON());

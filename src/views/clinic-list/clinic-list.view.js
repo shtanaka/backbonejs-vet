@@ -5,7 +5,7 @@ ClinicsApp.views.ClinicListItemView = Backbone.View.extend({
     "click" : "goToDetails"
   },
   initialize: function () {
-    this.template = _.template($('.clinic-list-item-template').html());
+    this.template = _.template(clinicListItemTemplate);
   },
   render: function () {
     var html = this.template(this.model.toJSON());

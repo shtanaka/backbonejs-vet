@@ -6,7 +6,7 @@ ClinicsApp.views.Home = Backbone.View.extend({
     this.model.on('add', this.render, this);
     this.model.fetch();
   },
-  template: _.template($('.home-template').html()),
+  template: _.template(homeTemplate),
   render: function (data) {
     self = this;
     self.scope.searchString = "";
